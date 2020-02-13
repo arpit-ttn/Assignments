@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Palindrome</title>
+	</head>
+
+	<body>
+		<h2>Enter the String</h2>
+		<input type="text" id="str">
+		<button onclick="Palindrom()" on> Check </button>
+		
+		<script>
+
+			function Palindrom()
+		{
+			var string=document.getElementById("str").value;
+			var stringrev = "";
+			for (var i = string.length - 1; i >= 0; i--) 
+			{
+			 stringrev+=string.charAt(i);
+			}
+			if (string==stringrev)
+			{
+			alert("String is a Palindrome");
+		    }
+		    else
+		    {
+		    alert("String is not a Palindrome");
+		    }
+		}
+			
+		</script>
+		
+	</body>
+</html>

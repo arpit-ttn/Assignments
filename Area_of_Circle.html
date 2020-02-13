@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Area_of_Circle</title>
+	</head>
+
+	<body>
+		<h2>Enter the radius</h2>
+		<input type="text" id="str">
+		<button onclick="f2()" on> Check </button>
+		<p id="p1"></p>
+		<script>
+			function f2()
+		{
+            var radius=document.getElementById("str").value;
+			var area_of_circle= (22/7)*radius*radius;
+		    document.getElementById("p1").innerHTML=area_of_circle;
+			
+		}
+		</script>
+
+	</body>
+</html>

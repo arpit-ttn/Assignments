@@ -1,0 +1,75 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>List_Js</title>
+
+	<script >
+		var Employee = [{ Name: 'Arpit', age: 22, salary: 5000,DOB:'22/01/1998'},
+   						{ Name: 'Aditya', age: 23, salary: 10000 ,DOB:'17/02/1997'},
+    					{ Name: 'Abheek', age: 21, salary: 500 ,DOB:'2/02/1999'},
+    					{ Name: 'Aulak', age: 40, salary: 250000 ,DOB:'16/03/1980'},
+    					{ Name: 'Pandey', age: 15, salary: 15000 ,DOB:'01/12/2005'},
+    					{ Name: 'Kritika', age: 25, salary: 900 ,DOB:'26/05/1995'},
+    					];
+
+    					//Question 5.1
+						document.write( "<b> Employee's List:<br> </b>");
+						for(var i in Employee)
+						{
+							document.write("Employee_Name: "+Employee[i].Name +" Age:"+ Employee[i].age + " Salary:" + Employee[i].salary + " DOB:" + Employee[i].DOB + "<br>");
+						}
+
+
+						//Question 5.2
+		
+						document.write( "<br> <b>Employees with salary greater than 5000 : </b><br>");
+						
+						var a = Employee.filter(function fil(Emp){
+							return Emp.salary>5000;
+						});
+						
+						for(var i in a)
+						{
+							document.write(""+a[i].Name+"<br>");
+						}
+		
+
+						//Question 5.3
+						document.write("<br><b>Employees according to their age:</b>");
+						var age_20=[];
+						var age_21_30=[];
+						var age_30=[];
+						for(var i in Employee)
+						{
+							if(Employee[i].age<=20)
+								 age_20.push(Employee[i].Name);
+							else if(Employee[i].age<=30)
+								 age_21_30.push(Employee[i].Name);
+							else
+								 age_30.push(Employee[i].Name);
+						}
+						document.write("<br>Age less than 20: "+age_20);
+						document.write("<br>Age between 20 and 30: "+age_21_30);
+						document.write("<br>Age above 30: "+age_30+"<br>");
+
+						
+						//Question 5.4
+						document.write("<br><b>Employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.</b>");
+						var salary_hike=[];
+						for(var i in Employee)
+						{
+							if(Employee[i].salary<=1000&&Employee[i].age>20)
+							{
+								document.write("<br>");
+								var old=Employee[i].salary;
+								Employee[i].salary=Employee[i].salary*5;
+								document.write("name: "+Employee[i].Name+" Old salary: "+old+" new salary: "+Employee[i].salary);
+							}
+						}
+
+
+	</script>
+</head>
+</html>
