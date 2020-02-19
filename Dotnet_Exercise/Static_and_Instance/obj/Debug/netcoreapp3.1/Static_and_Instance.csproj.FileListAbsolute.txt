@@ -1,0 +1,11 @@
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Static_and_Instance.csprojAssemblyReference.cache
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Static_and_Instance.AssemblyInfoInputs.cache
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Static_and_Instance.AssemblyInfo.cs
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Static_and_Instance.exe
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Static_and_Instance.deps.json
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Static_and_Instance.runtimeconfig.json
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Static_and_Instance.runtimeconfig.dev.json
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Static_and_Instance.dll
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Static_and_Instance.pdb
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Static_and_Instance.dll
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Static_and_Instance.pdb

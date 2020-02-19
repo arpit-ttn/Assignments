@@ -1,0 +1,11 @@
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Dotnet_Exercise.exe
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Dotnet_Exercise.deps.json
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Dotnet_Exercise.runtimeconfig.json
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Dotnet_Exercise.runtimeconfig.dev.json
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Dotnet_Exercise.dll
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\bin\Debug\netcoreapp3.1\Dotnet_Exercise.pdb
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Dotnet_Exercise.csprojAssemblyReference.cache
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Dotnet_Exercise.AssemblyInfoInputs.cache
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Dotnet_Exercise.AssemblyInfo.cs
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Dotnet_Exercise.dll
+C:\Users\Arpit Deora\source\repos\Static_and_Instance\Static_and_Instance\obj\Debug\netcoreapp3.1\Dotnet_Exercise.pdb
