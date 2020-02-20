@@ -1,0 +1,11 @@
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\bin\Debug\netcoreapp3.1\OOPS _Exercise.exe
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\bin\Debug\netcoreapp3.1\OOPS _Exercise.deps.json
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\bin\Debug\netcoreapp3.1\OOPS _Exercise.runtimeconfig.json
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\bin\Debug\netcoreapp3.1\OOPS _Exercise.runtimeconfig.dev.json
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\bin\Debug\netcoreapp3.1\OOPS _Exercise.dll
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\bin\Debug\netcoreapp3.1\OOPS _Exercise.pdb
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\obj\Debug\netcoreapp3.1\OOPS _Exercise.csprojAssemblyReference.cache
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\obj\Debug\netcoreapp3.1\OOPS _Exercise.AssemblyInfoInputs.cache
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\obj\Debug\netcoreapp3.1\OOPS _Exercise.AssemblyInfo.cs
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\obj\Debug\netcoreapp3.1\OOPS _Exercise.dll
+C:\Users\Arpit Deora\source\repos\OOPS _Exercise\OOPS _Exercise\obj\Debug\netcoreapp3.1\OOPS _Exercise.pdb
