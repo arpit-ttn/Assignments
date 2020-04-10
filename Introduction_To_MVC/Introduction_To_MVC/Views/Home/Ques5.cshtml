@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ques5</title>
+</head>
+<body>
+    <div>
+        <p>Q-5. Use of Global. Asax and difference b/w global Web config and View Web Config.</p>
+        <p>
+            <strong>Global.asax</strong> <br />
+            The Global.asax file is configured so that any direct HTTP request (via URL) is rejected automatically, so users cannot download or view its contents.
+            The ASP.NET page framework recognizes automatically any changes that are made to the Global.asax file. The framework reboots the application, which includes closing all browser sessions,
+            flushes all state information, and restarts the application domain.
+            <strong> Web.Config </strong> <br />
+            The web.config is an XML-formatted text file that resides in the Web site’s root directory.
+            We don’t have to do compile/rebuild with web.config change (you only have to save the web.config file) to reflect the change.
+            The web.config file specifies configuration data for the .NET application, like custom error pages, authentication and authorization settings for the Web site,
+            compilation options for the ASP.NET Web pages, if tracing should be enabled, and etc.Commonly we put connection strings in web.config.
+        </p>
+        @Html.ActionLink("Home", "HomePage")
+    </div>
+</body>
+</html>

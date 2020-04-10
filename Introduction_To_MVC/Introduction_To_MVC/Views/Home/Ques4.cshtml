@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ques4</title>
+</head>
+<body>
+    <div>
+        <p>Q-4. Why we use App_Start, App_Data and Shared Folder.</p>
+
+        <p>
+            <strong>App_Data</strong> <br />
+            App_Data is used to store file that can be used as database files (.mdf and xml files).
+            App_Data folder is used by ASP.NET application for storing ASP.NET application local database. Developers can also use this folder for storing data for their ASP.NET Application.
+        </p>
+        <p>
+            <strong>App_Start</strong><br />
+            App_Start is a folder which contains Configuration classes such as BundleConfig, RouteConfig and FilterCongig.
+            These classes contains the registration of the Bundles , Routes and Filters according to the developer.
+            This is the class which is loaded at initial stage if the application and it loads all the registered components of the application at once which can be used further throughout the application.
+        </p>
+        <p>
+            <strong>Shared Folder</strong><br />
+            The Shared Folder in MVC is used to contain all the views which are needed to be shared by different controllers e.g. error files, layout files or any common page which is to shown from any action.
+        </p>
+        @Html.ActionLink("Home", "HomePage")
+    </div>
+
+</body>
+</html>

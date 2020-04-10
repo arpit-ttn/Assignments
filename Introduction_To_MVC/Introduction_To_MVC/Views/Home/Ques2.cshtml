@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ques2</title>
+</head>
+<body>
+    <div>
+        <p>Q-2. Explain MVC Life Cycle.</p>
+        <img src="~/Image/MVC_Image.png" /><br />
+
+        <ol>
+            <li>
+                Routing is basically a pattern matching system and at what time what action method should be called is done through routing. We can gives our own routing in RouteConfig file in AppStart.
+            </li>
+            <li>
+                Controller Initialization means that a controller is added in the project so that all the action methods can be created and  same can be called through the controller.
+            </li>
+            <li>
+                After Routing and controller here comes the action execution which in simple terms means that the execution of action method action method is always given after the controller with its http verb.
+            </li>
+            <li>
+                A typical action method might receive user input prepare the appropriate response data, and then execute the result by returning a result type. The built-in result
+                types that can be executed include the following: ViewResult(which renders a view and is the most-often used result type),
+                RedirectToRouteResult, RedirectResult, ContentResult, JsonResult, and EmptyResult.
+            </li>
+            <li>
+                The MVC View is a standard HTML page that may contain script. It is used to create web pages for the application. Unlike ASP.NET Web Pages,
+                MVC Views are mapped to the action and then controller renders the view to the browser and it uses Razor view engine.
+            </li>
+        </ol>
+        @Html.ActionLink("Home", "HomePage")
+    </div>
+</body>
+</html>

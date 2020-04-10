@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ques3</title>
+</head>
+<body>
+    <div>
+        
+        <h3>Q-3 How to pass data from Controller to view and view to the controller with Example.
+        How to call and pass data from one controller to another controller.</h3>
+        
+        <h4>@ViewBag.Name</h4>
+        
+        <h4>@ViewBag.Property</h4>
+        <ul>
+            @foreach (var item in (List<string>)ViewData["MyList"])
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <section>
+            
+            <p>To see Data transfer between 2 controller click on the below link : </p><br />
+            @Html.ActionLink("Go to Data Contoller", "Index", "Data")<br />
+
+        </section>
+        
+        <section>
+            <h3>Fill data to pass to the controller with Request : </h3>
+            @using (Html.BeginForm("UsingRequest", "Home"))
+            {
+                <input type="text" name="Firstname" />
+                <input type="text" name="Lastname" />
+                <input type="submit" value="Submit" />
+            }
+        </section>
+        
+        @Html.ActionLink("Home", "HomePage")
+    </div>
+</body>
+</html>
