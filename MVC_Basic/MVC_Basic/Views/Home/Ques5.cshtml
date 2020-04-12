@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Ques5";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Question 05</h2>
+<p>What is bundling and how to use bundling in view.</p>
+<strong>Bundling :</strong>
+<p>
+    Bundling is the process of making a bundle of the style sheeets or script files under one name
+    and register them in the Bundle Config file which is present in the App_Start folder.
+    I have implemented it by making the bundles of the .css and the .js files in my project and added them to the main layout
+    as Styles.Render("~/bundle/css") and  Scripts.Render("~/bundle/script")
+</p>

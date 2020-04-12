@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Ques3";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+
+@section RenderName
+{
+    <h2>Question 03</h2>
+}
+<div>
+    <strong>Render Section :</strong>
+    <p>
+        Render Section is used to render any section in the child request.
+        Implemented as Question 03 is visible from the render section only.
+    </p>
+
+</div>
+<p>
+    Below is a Use of cshtml function datetime - <br />
+</p>
+@{
+    var text = "";
+    if (DateTime.Now.Hour < 12)
+    {
+        text =  "This is the Morning Time Here";
+    }
+    else
+    {
+        text = "This is the  Evening Time Here";
+    }
+}
+<b>@text</b>
+
+<p>
+    <strong>Binding : </strong>
+    You can select the Driver list and View the form from the sidebar.
+    The Form Action has implemented the Binding but not saved in the DB.  
+</p>
+

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Ques2";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Question 02</h2>
+<p>Explain NoAction, ChildActionOnly</p>
+<p>
+    This Button will perform a Non-Action Method from the controller , this will throw an error as a Non-Action
+    method cannot be called.
+</p>
+<br/>
+@Html.ActionLink("Click Here", "NonAction", "Home", htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+<br />
+<p>
+    <br />
+    Child Action Only :
+    
+</p>
+<br />
+@{ 
+    Html.RenderAction("ChildAction");
+}
+
+

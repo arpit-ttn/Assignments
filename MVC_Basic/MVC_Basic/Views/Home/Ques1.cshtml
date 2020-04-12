@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Ques1";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Question 01</h2>
+<p>
+    Explain RenderPartial, Partial and Render Action.
+
+</p>
+<p>
+    <strong>Render Partial :</strong> Renders the partial view as an HTML-encoded string.
+    This method result can be stored in a variable, since it returns string type value. Simple to use and no need to create any action.
+</p>
+<p>
+    <strong>Partial : </strong>
+    Partial view is used to render any partial view page by using Html.Partial 
+    Implemented in the Main layout as sidebar or navbar is declared as partial view.
+</p>
+<p>
+    <strong>Render Action : </strong>
+    @{Html.RenderAction("OneSubpart");}
+</p>
+

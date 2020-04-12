@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVC_Basic.Models.Driver>
+
+@{
+    ViewBag.Title = "GetDriver";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Driver List</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Driver_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverAge)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Driver_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverAge)
+        </td>
+      
+    </tr>
+}
+
+</table>
