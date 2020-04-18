@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5d5e8efb1afb411192442b3fdca9a5df" Name="Diagram1">
+        <EntityTypeShape EntityType="RacingModel.Car" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacingModel.Driver" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacingModel.own" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacingModel.Participation" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacingModel.Race" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="RacingModel.FK__owns__LicenseNum__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="RacingModel.FK__owns__DriverId__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="RacingModel.FK__Participa__Drive__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="RacingModel.FK__Participa__RaceN__2F10007B" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RacingModel.UserDetail" Width="1.5" PointX="5.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

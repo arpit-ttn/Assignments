@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MVC_PROJECT.Models.Driver>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverSalary)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverSalary)
+        </td>
+      
+    </tr>
+}
+
+</table>

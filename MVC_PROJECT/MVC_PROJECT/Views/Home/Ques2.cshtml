@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Ques2";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>How to pass view from the filter and share one example of IExceptionfilter</h2>
+<br />
+<p>
+    We can pass a view from the filter by implementing its OnExecuting method as I have done in my PassFilter in Filter Folder by inherting the FilterAttribute,IExceptionFilter class .
+</p>
+<p>
+    Click the below button to see the implmentaion of the Iexception Filter <br />
+    It will redirect you to the error page but it is calling 'act' action from the Home Controller.
+</p>
+
+@Html.ActionLink("Click Here ", "act", "Home", htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+
+

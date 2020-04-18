@@ -1,0 +1,64 @@
+﻿<nav id="sidebar"style="color:darkred">
+    <div class="sidebar-header" style="color:darkred">
+        <h3>Arpit F1 Racing</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+        <p>Racing Info</p>
+        <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Driver</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href='@Url.Action("Create","Driver")'>Driver Form</a>
+                </li>
+                <li>
+                    <a href='@Url.Action("Index","Driver")'>Driver Details</a>
+                </li>
+            </ul>
+        </li>
+    
+        <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Events</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href='@Url.Action("Index","Event")'>Car Details</a>
+                </li>
+                <li>
+                    <a href='@Url.Action("Index1","Event")'>Race Details</a>
+                </li>
+
+            </ul>
+        </li>
+        @*@RenderMenu(1,"Events")*@
+        @*@RenderMenu(2,"Home 2")*@
+        @*<li>
+            @Html.ActionLink("Employees","getemployees","Employee")
+        </li>*@
+        <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Portfolio</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                    <a href='@Url.Action("Index","Winner")'>Owners</a>
+                </li>
+                <li>
+                    <a href='@Url.Action("Index","Winner")'>Participation</a>
+                </li>
+            </ul>
+        </li>
+       
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        @*@RenderMenu(3,"Home 3")
+    </ul>
+
+    <ul class="list-unstyled CTAs">
+        <li>
+            <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+        </li>
+        <li>
+            <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+        </li>
+    </ul>*@
+</nav>
+

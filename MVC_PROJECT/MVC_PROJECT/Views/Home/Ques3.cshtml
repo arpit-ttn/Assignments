@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Ques3";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2> Difference between validation summary and ValidationMessageFor and how to check if the controller model is valid or not.Explain AntiForgery Token attribute also.</h2>
+<p>
+    ValidationMessageFor is used to show the validation mesasge for the feild on which we have implemented the
+    validations respectively.
+    ValidationSummary is used to show the validation message at one location (mostly at the top of the form).
+    <br />
+    Model validation is checked at Form (Go on Driver on sidebar and tap on Driver Form).
+</p>
+<br />
+<strong>Anti-Forgery Token</strong>
+<br />
+<p>
+    The basic purpose of ValidateAntiForgeryToken attribute is to prevent cross-site request forgery attacks.
+    A cross-site request forgery is an attack in which a harmful script element, malicious command, or code is sent from the browser of a trusted user.
+</p>

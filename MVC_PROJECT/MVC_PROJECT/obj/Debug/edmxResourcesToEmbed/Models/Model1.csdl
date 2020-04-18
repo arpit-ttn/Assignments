@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RacingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="LicenseNumber" />
+    </Key>
+    <Property Name="LicenseNumber" Type="Int32" Nullable="false" />
+    <Property Name="CarCompany" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CarYear" Type="Int32" />
+    <NavigationProperty Name="owns" Relationship="Self.FK__owns__LicenseNum__2B3F6F97" FromRole="Car" ToRole="owns" />
+  </EntityType>
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="DriverId" />
+    </Key>
+    <Property Name="DriverId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DriverName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DriverAge" Type="Int32" />
+    <Property Name="DriverAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DriverEmail" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DriverSalary" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="owns" Relationship="Self.FK__owns__DriverId__2A4B4B5E" FromRole="Driver" ToRole="owns" />
+    <NavigationProperty Name="Participations" Relationship="Self.FK__Participa__Drive__2E1BDC42" FromRole="Driver" ToRole="Participation" />
+  </EntityType>
+  <EntityType Name="own">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DriverId" Type="Int32" />
+    <Property Name="LicenseNumber" Type="Int32" />
+    <NavigationProperty Name="Car" Relationship="Self.FK__owns__LicenseNum__2B3F6F97" FromRole="owns" ToRole="Car" />
+    <NavigationProperty Name="Driver" Relationship="Self.FK__owns__DriverId__2A4B4B5E" FromRole="owns" ToRole="Driver" />
+  </EntityType>
+  <EntityType Name="Participation">
+    <Key>
+      <PropertyRef Name="ParticipationId" />
+    </Key>
+    <Property Name="ParticipationId" Type="Int32" Nullable="false" />
+    <Property Name="DriverId" Type="Int32" />
+    <Property Name="RaceNumber" Type="Int32" />
+    <Property Name="FinalPosition" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Driver" Relationship="Self.FK__Participa__Drive__2E1BDC42" FromRole="Participation" ToRole="Driver" />
+    <NavigationProperty Name="Race" Relationship="Self.FK__Participa__RaceN__2F10007B" FromRole="Participation" ToRole="Race" />
+  </EntityType>
+  <EntityType Name="Race">
+    <Key>
+      <PropertyRef Name="RaceNumber" />
+    </Key>
+    <Property Name="RaceNumber" Type="Int32" Nullable="false" />
+    <Property Name="RaceDate" Type="DateTime" Precision="0" />
+    <Property Name="RaceLocation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Participations" Relationship="Self.FK__Participa__RaceN__2F10007B" FromRole="Race" ToRole="Participation" />
+  </EntityType>
+  <Association Name="FK__owns__LicenseNum__2B3F6F97">
+    <End Role="Car" Type="Self.Car" Multiplicity="0..1" />
+    <End Role="owns" Type="Self.own" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Car">
+        <PropertyRef Name="LicenseNumber" />
+      </Principal>
+      <Dependent Role="owns">
+        <PropertyRef Name="LicenseNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__owns__DriverId__2A4B4B5E">
+    <End Role="Driver" Type="Self.Driver" Multiplicity="0..1" />
+    <End Role="owns" Type="Self.own" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="DriverId" />
+      </Principal>
+      <Dependent Role="owns">
+        <PropertyRef Name="DriverId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Participa__Drive__2E1BDC42">
+    <End Role="Driver" Type="Self.Driver" Multiplicity="0..1" />
+    <End Role="Participation" Type="Self.Participation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Driver">
+        <PropertyRef Name="DriverId" />
+      </Principal>
+      <Dependent Role="Participation">
+        <PropertyRef Name="DriverId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Participa__RaceN__2F10007B">
+    <End Role="Race" Type="Self.Race" Multiplicity="0..1" />
+    <End Role="Participation" Type="Self.Participation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Race">
+        <PropertyRef Name="RaceNumber" />
+      </Principal>
+      <Dependent Role="Participation">
+        <PropertyRef Name="RaceNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RacingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cars" EntityType="Self.Car" />
+    <EntitySet Name="Drivers" EntityType="Self.Driver" />
+    <EntitySet Name="owns" EntityType="Self.own" />
+    <EntitySet Name="Participations" EntityType="Self.Participation" />
+    <EntitySet Name="Races" EntityType="Self.Race" />
+    <AssociationSet Name="FK__owns__LicenseNum__2B3F6F97" Association="Self.FK__owns__LicenseNum__2B3F6F97">
+      <End Role="Car" EntitySet="Cars" />
+      <End Role="owns" EntitySet="owns" />
+    </AssociationSet>
+    <AssociationSet Name="FK__owns__DriverId__2A4B4B5E" Association="Self.FK__owns__DriverId__2A4B4B5E">
+      <End Role="Driver" EntitySet="Drivers" />
+      <End Role="owns" EntitySet="owns" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Participa__Drive__2E1BDC42" Association="Self.FK__Participa__Drive__2E1BDC42">
+      <End Role="Driver" EntitySet="Drivers" />
+      <End Role="Participation" EntitySet="Participations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Participa__RaceN__2F10007B" Association="Self.FK__Participa__RaceN__2F10007B">
+      <End Role="Race" EntitySet="Races" />
+      <End Role="Participation" EntitySet="Participations" />
+    </AssociationSet>
+    <EntitySet Name="UserDetails" EntityType="RacingModel.UserDetail" />
+  </EntityContainer>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

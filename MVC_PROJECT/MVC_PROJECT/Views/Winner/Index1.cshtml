@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MVC_PROJECT.Models.Participation>
+
+@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Index1</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FinalPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Driver.DriverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Race.RaceLocation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinalPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Driver.DriverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Race.RaceLocation)
+        </td>
+       
+    </tr>
+}
+
+</table>
