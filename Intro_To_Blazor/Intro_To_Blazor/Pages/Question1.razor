@@ -1,0 +1,31 @@
+﻿@page "/Question1"
+
+<h3>Q-1 Difference between the Blazor client-side and server-side and also explain web assembly and Signal R connection.</h3>
+
+<br />
+
+<div>
+    <h4>Blazor client side</h4>
+    <p>
+        Blazor is a framework designed to run the client side in the browser on a web assembly based model that .net runtime provides.
+        All the dependencies and the runtime is downloaded in the browser.The app is directly executed on the browser without using server communication.
+    </p>
+
+    <h4>Blazor server side</h4>
+    <p>
+        In blazor servide side blazor app is executed on the server. Event handling and all the task are handled by the signal r connection.
+        It creates the signal R endpoint where the client can connect.
+    </p>
+    <h4> Web assembly </h4>
+    <p>
+        The principal hosting model for Blazor is running client-side in the browser on WebAssembly.
+        The Blazor app, its dependencies, and the .NET runtime are downloaded to the browser.
+        The app is executed directly on the browser UI thread. UI updates and event handling occur within the same process.
+    </p>
+    <h4> SignalR</h4>
+    <p>
+        SignalR handles connection management automatically, and lets you broadcast messages to all connected clients simultaneously, like a chat room.
+        You can also send messages to specific clients. The connection between the client and server is persistent,
+        unlike a classic HTTP connection, which is re-established for each communication.
+    </p>
+</div>

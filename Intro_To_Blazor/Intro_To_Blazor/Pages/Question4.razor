@@ -1,0 +1,45 @@
+﻿@page "/Question4"
+@inject NavigationManager _navigate
+<h3> Q-4 Explain all binding with example.</h3>
+<br />
+<h4>
+    Three Types of Binding:
+</h4>
+<br />
+<h4> 1. One-Way Data Binding</h4>
+
+<h5>
+    In one-way binding, we need to pass property or variable name along with (here Name is either the property or variable).
+    In the following example,I have done one-way binding with variable Oneway.
+</h5>
+
+<p>
+    @Oneway
+</p>
+
+
+@functions {
+    string Oneway = "Test One-way Data Binding!";
+
+}
+<br />
+<h4>
+    2. Two-Way Data Binding
+</h4>
+ Enter your name:
+<input type="text" bind=@name />
+@functions
+{
+    public string name { get; set; }
+    public void Click()
+    {
+        _navigate.NavigateTo("Question5");
+
+    }
+}
+
+<br />
+<h4> 3.Event Data Binding</h4>
+
+<input type="button" value="click" @onclick="Click" />
+
