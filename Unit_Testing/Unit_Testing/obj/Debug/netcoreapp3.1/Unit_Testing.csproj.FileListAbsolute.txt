@@ -1,0 +1,13 @@
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\bin\Debug\netcoreapp3.1\Unit_Testing.exe
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\obj\Debug\netcoreapp3.1\Unit_Testing.AssemblyInfoInputs.cache
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\obj\Debug\netcoreapp3.1\Unit_Testing.AssemblyInfo.cs
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\bin\Debug\netcoreapp3.1\Unit_Testing.deps.json
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\bin\Debug\netcoreapp3.1\Unit_Testing.runtimeconfig.json
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\bin\Debug\netcoreapp3.1\Unit_Testing.runtimeconfig.dev.json
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\bin\Debug\netcoreapp3.1\Unit_Testing.dll
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\bin\Debug\netcoreapp3.1\Unit_Testing.pdb
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\obj\Debug\netcoreapp3.1\Unit_Testing.csproj.CopyComplete
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\obj\Debug\netcoreapp3.1\Unit_Testing.dll
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\obj\Debug\netcoreapp3.1\Unit_Testing.pdb
+C:\Users\Arpit Deora\source\repos\Unit_Testing\Unit_Testing\obj\Debug\netcoreapp3.1\Unit_Testing.csprojAssemblyReference.cache
