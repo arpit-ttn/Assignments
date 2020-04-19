@@ -1,0 +1,57 @@
+﻿@page "/DeleteStudent/{CurrentID}"
+<h3>DeleteStudent</h3>
+<h3>Do you really want to Delete this Entry ?</h3>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label>Student ID : </label>
+            <label>@student.StudentId</label>
+        </div>
+        <div class="form-group">
+            <label> Name : </label>
+            <label>@student.StudentName</label>
+        </div>
+        <div class="form-group">
+            <label>Course : </label>
+            <label>@student.StudentCourse</label>
+        </div>
+        <div class="form-group">
+            <label>Address : </label>
+            <label>@student.StudentAddress</label>
+        </div>
+       
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="button" class="btn-btn-danger" @onclick="@Delete" value="Delete" />
+            <input type="button" class="btn-btn-primary" @onclick="@Cancel" value="Cancel" />
+        </div>
+    </div>
+</div>
+
+@functions
+{
+    [Parameter]
+    public string CurrentID { get; set; }
+
+    Student student = new Student();
+    protected override async Task OnInitializedAsync()
+    {
+        student = _student.GetStudentById(Convert.ToInt32(CurrentID));
+    }
+
+
+    private void Delete()
+    {
+        _student.Delete(student);
+        _navigation.NavigateTo("Student");
+    }
+    private void Cancel()
+    {
+        _navigation.NavigateTo("Student");
+    }
+
+}

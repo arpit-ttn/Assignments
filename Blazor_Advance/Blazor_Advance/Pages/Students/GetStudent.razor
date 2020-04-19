@@ -1,0 +1,58 @@
+﻿@page "/Student"
+
+<h3>Student</h3>
+
+<NavLink class="nav-link" href="AddStudent">
+    <span class="oi oi-plus" aria-hidden="true"> ADD NEW</span>
+</NavLink>
+<h1>Student Details</h1>
+@if (objstudent == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Student Course</th>
+                <th>Student Address</th>
+               
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in objstudent)
+            {
+                <tr>
+                    <td>@item.StudentId</td>
+                    <td>@item.StudentName</td>
+                    <td>@item.StudentCourse</td>
+                    <td>@item.StudentAddress</td>
+                    
+
+                    <td>
+                        <a class="nav-link" href="EditStudent/@item.StudentId">
+                            <span class="oi oi-pencil" aria-hidden="true"></span> Edit
+                        </a>
+                        <a class="nav-link" href="DeleteStudent/@item.StudentId">
+                            <span class="oi oi-trash" aria-hidden="true"></span> Delete
+                        </a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@functions
+{
+    List<Student> objstudent;
+    protected override async Task OnInitializedAsync()
+    {
+        objstudent = _student.GetStudent();
+
+    }
+}

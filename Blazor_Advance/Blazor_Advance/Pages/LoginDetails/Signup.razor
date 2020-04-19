@@ -1,0 +1,44 @@
+﻿@page "/Signup"
+@inject SignUpService _signup
+@layout LoginLayout
+<h3>SignUp</h3>
+
+
+<form>
+    <div class="container-fluid">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="username" class="control-label">User Name</label>
+                <input form="username" class="form-control" @bind="@userDetails.UserName" />
+            </div>
+            <div class="form-group">
+                <label for="password" class="control-label">Password</label>
+                <input type="password" class="form-control" @bind="@userDetails.Password" />
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn-btn-primary" @onclick="@Insert" value="Sign Up" /> &nbsp;&nbsp;&nbsp;
+                <a href="/"> LogIn</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+@code {
+    UserDetails userDetails = new UserDetails();
+
+    private void Insert()
+    {
+        _signup.Insert(userDetails);
+        _navigation.NavigateTo("/");
+    }
+
+
+
+}
+

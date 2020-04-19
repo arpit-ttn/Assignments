@@ -1,0 +1,53 @@
+﻿@page "/DeleteLink/{CurrentID}"
+<h3>DeleteStudent</h3>
+<h3>Do you want to Delete this Entry ?</h3>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label> ID : </label>
+            <label>@sidebar.Id</label>
+        </div>
+        <div class="form-group">
+            <label>Link Name : </label>
+            <label>@sidebar.LinkName</label>
+        </div>
+        <div class="form-group">
+            <label>Link Address : </label>
+            <label>@sidebar.LinkAddress</label>
+        </div>
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="button" class="btn-btn-danger" @onclick="@Delete" value="Delete" />
+            <input type="button" class="btn-btn-primary" @onclick="@Cancel" value="Cancel" />
+        </div>
+    </div>
+</div>
+
+@functions
+{
+    [Parameter]
+    public string CurrentID { get; set; }
+
+    Sidebar sidebar = new Sidebar();
+    protected override async Task OnInitializedAsync()
+    {
+        sidebar = _sidebar.GetLinksById(Convert.ToInt32(CurrentID));
+    }
+
+
+    private void Delete()
+    {
+        _sidebar.Delete(sidebar);
+        _navigation.NavigateTo("Link");
+    }
+    private void Cancel()
+    {
+        _navigation.NavigateTo("Link");
+    }
+
+}

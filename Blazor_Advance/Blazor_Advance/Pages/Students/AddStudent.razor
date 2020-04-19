@@ -1,0 +1,48 @@
+﻿@page "/AddStudent"
+<h3>AddStudent</h3>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="SName" class="control-label">Student Name</label>
+                <input form="SName" class="form-control" @bind="@student.StudentName" />
+            </div>
+            <div class="form-group">
+                <label for="SCourse" class="control-label">Student Course</label>
+                <input form="SCourse" class="form-control" @bind="@student.StudentCourse" />
+            </div>
+            <div class="form-group">
+                <label for="SAddress" class="control-label">Student Address</label>
+                <input form="SAddress" class="form-control" @bind="@student.StudentAddress" />
+            </div>
+           
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn-btn-primary" @onclick="@InsertStudent" value="Save" />
+                <input type="button" class="btn-btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+@functions
+{
+    Student student = new Student();
+    private void InsertStudent()
+    {
+        _student.Insert(student);
+        _navigation.NavigateTo("Student");
+    }
+    private void Cancel()
+    {
+        _navigation.NavigateTo("Student");
+    }
+
+}

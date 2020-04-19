@@ -1,0 +1,57 @@
+﻿@page "/EditLink/{CurrentID}"
+<h3>EditStudent</h3>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="ID" class="control-label">ID</label>
+                <input form="ID" class="form-control" @bind="@sidebar.Id" />
+            </div>
+            <div class="form-group">
+                <label for="LName" class="control-label">Link Name</label>
+                <input form="LName" class="form-control" @bind="@sidebar.LinkName" />
+            </div>
+            <div class="form-group">
+                <label for="LAddress" class="control-label">Link Address</label>
+                <input form="LAddress" class="form-control" @bind="@sidebar.LinkAddress" />
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn-btn-primary" @onclick="@UpdateLink" value="UPDATE" />
+                <input type="button" class="btn-btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@functions
+{
+    [Parameter]
+    public string CurrentID { get; set; }
+
+    Sidebar sidebar = new Sidebar();
+    protected override async Task OnInitializedAsync()
+    {
+        sidebar = _sidebar.GetLinksById(Convert.ToInt32(CurrentID));
+    }
+
+
+    private void UpdateLink()
+    {
+        _sidebar.Update(sidebar);
+        _navigation.NavigateTo("Link");
+    }
+    private void Cancel()
+    {
+        _navigation.NavigateTo("Link");
+    }
+
+}

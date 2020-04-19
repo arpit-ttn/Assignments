@@ -1,0 +1,53 @@
+﻿@page "/Link"
+
+
+<NavLink class="nav-link" href="AddLink">
+    <span class="oi oi-plus" aria-hidden="true">ADD NEW</span>
+</NavLink>
+<h1>Link Details</h1>
+@if (sidebar == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Link Name</th>
+                <th>Link Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in sidebar)
+            {
+                <tr>
+                   
+                    <td>@item.LinkName</td>
+                    <td>@item.LinkAddress</td>
+
+
+                    <td>
+                        <a class="nav-link" href="EditLink/@item.Id">
+                            <span class="oi oi-pencil" aria-hidden="true"></span> Edit
+                        </a>
+                        <a class="nav-link" href="DeleteLink/@item.Id">
+                            <span class="oi oi-trash" aria-hidden="true"></span> Delete
+                        </a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@functions
+{
+    List<Sidebar> sidebar;
+    protected override async Task OnInitializedAsync()
+    {
+        sidebar = _sidebar.GetLinks();
+
+    }
+}
+

@@ -1,0 +1,60 @@
+﻿@page "/EditStudent/{CurrentID}"
+<h3>EditStudent</h3>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="ID" class="control-label">Student ID</label>
+                <input form="ID" class="form-control" @bind="@student.StudentId" />
+            </div>
+            <div class="form-group">
+                <label for="SName" class="control-label">Student Name</label>
+                <input form="SName" class="form-control" @bind="@student.StudentName" />
+            </div>
+            <div class="form-group">
+                <label for="SCourse" class="control-label">Student Course</label>
+                <input form="Scourse" class="form-control" @bind="@student.StudentCourse" />
+            </div>
+            <div class="form-group">
+                <label for="SAddress" class="control-label">Student Address</label>
+                <input form="SAddress" class="form-control" @bind="@student.StudentAddress" />
+            </div>
+           
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn-btn-primary" @onclick="@UpdateStudent" value="UPDATE" />
+                <input type="button" class="btn-btn-primary" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@functions
+{
+    [Parameter]
+    public string CurrentID { get; set; }
+
+    Student student = new Student();
+    protected override async Task OnInitializedAsync()
+    {
+        student = _student.GetStudentById(Convert.ToInt32(CurrentID));
+    }
+
+
+    private void UpdateStudent()
+    {
+        _student.Update(student);
+        _navigation.NavigateTo("Student");
+    }
+    private void Cancel()
+    {
+        _navigation.NavigateTo("Student");
+    }
+
+}

@@ -1,0 +1,54 @@
+﻿@page "/"
+@page "/Login"
+@layout LoginLayout
+<h3>Login Page</h3>
+
+
+
+<form>
+    <div class="container-fluid">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="username" class="control-label">User Name</label>
+                <input form="username" class="form-control" @bind="@userDetails.UserName" />
+            </div>
+            <div class="form-group">
+                <label for="password" class="control-label">Password</label>
+                <input type="password" class="form-control" @bind="@userDetails.Password" />
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn-btn-primary" @onclick="@submitdata" value="Login" /> &nbsp;&nbsp;&nbsp;
+                <a href="Signup"> Sign Up</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+@code {
+
+    StudentContext context = new StudentContext();
+
+    UserDetails userDetails = new UserDetails();
+
+    private void submitdata()
+    {
+        var details = context.UserDetails.Where(x => x.UserName == userDetails.UserName && x.Password == userDetails.Password).FirstOrDefault();
+        if (details != null)
+        {
+            _navigation.NavigateTo("/Index");
+        }
+        else
+        {
+            _navigation.NavigateTo("/");
+        }
+    }
+
+
+}
+
